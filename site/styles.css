@@ -790,6 +790,86 @@ textarea {
   background-image: url("./assets/jet-profile.svg");
 }
 
+.hero--home .hero__inner {
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  gap: clamp(1.6rem, 2.6vw, 2.8rem);
+}
+
+.hero--home h1 {
+  max-width: 14ch;
+  font-size: clamp(2.2rem, 4.1vw, 3.65rem);
+  line-height: 0.94;
+}
+
+.hero--home .hero__lead {
+  max-width: 27rem;
+  font-size: clamp(0.98rem, 1.18vw, 1.04rem);
+}
+
+.hero--home .hero__actions {
+  gap: 0.8rem;
+}
+
+.hero--home .hero__notes {
+  gap: 0.75rem;
+}
+
+.hero--home .hero__note {
+  padding: 0.9rem 0.95rem 0.88rem;
+}
+
+.hero--home .hero__note strong {
+  font-size: 0.82rem;
+}
+
+.hero--home .hero__note span {
+  font-size: 0.84rem;
+  line-height: 1.46;
+}
+
+.hero--home .hero-stage {
+  min-height: 520px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.hero--home .hero-stage__frame {
+  inset: 3rem 0.5rem 0.8rem 6rem;
+  border-radius: 34px;
+}
+
+.hero--home .hero-stage__card {
+  background: rgba(251, 246, 238, 0.9);
+  padding: 0.95rem 1rem;
+}
+
+.hero--home .hero-stage__card--top {
+  top: 0.3rem;
+  left: -0.2rem;
+  width: min(255px, 55%);
+}
+
+.hero--home .hero-stage__card--mid {
+  right: -0.1rem;
+  bottom: 8rem;
+  width: min(290px, 56%);
+}
+
+.hero--home .hero-stage__card--bottom {
+  left: 0.6rem;
+  bottom: 1.2rem;
+  width: min(290px, 58%);
+}
+
+.hero--home .hero-stage__label {
+  margin-bottom: 0.7rem;
+}
+
+.hero--home .hero-stage__card p,
+.hero--home .hero-stage__card li {
+  font-size: 0.9rem;
+  line-height: 1.48;
+}
+
 .hero--services .hero-stage__frame::after,
 .hero--contact .hero-stage__frame::after {
   left: 1rem;
@@ -1512,6 +1592,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .hero--home .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
   .hero-stage {
     min-height: 560px;
   }
@@ -1604,6 +1688,15 @@ textarea {
   .hero h1 {
     max-width: 12ch;
     font-size: clamp(2.3rem, 9.2vw, 3.45rem);
+  }
+
+  .hero--home h1 {
+    max-width: 11ch;
+    font-size: clamp(2.05rem, 8.2vw, 3.05rem);
+  }
+
+  .hero--home .hero__lead {
+    max-width: none;
   }
 
   .section h2,
