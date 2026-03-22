@@ -1,0 +1,53 @@
+Work only in this folder and do not modify any other version:
+
+{{ROOT}}
+
+Context:
+- This is a standalone redesign concept for the 3650 Capital site.
+- Keep the current hard-edged editorial/institutional direction.
+- Nav must be: Home / Firm / Solutions / Transactions / Leadership / Contact.
+- Use and preserve existing content (you can reflow/recompose it, not rewrite the business facts).
+- Trust screenshots over markup assumptions.
+
+Mission:
+Run a render-first autonomous improvement loop until the design is materially stronger on desktop and mobile.
+
+Workflow (must follow):
+1. Open/run locally.
+2. Capture screenshots (desktop full + fold, mobile full + fold) into /review/automation or a new iteration folder.
+3. Critique render quality brutally (default assumption: current design is not good enough).
+4. Make concrete HTML/CSS edits.
+5. Repeat.
+6. Stop only when no obvious hierarchy/composition/readability regressions remain.
+
+Hard constraints:
+- Only edit files inside:
+  - {{ROOT}}/index.html
+  - {{ROOT}}/styles.css
+  - {{ROOT}}/firm.html
+  - {{ROOT}}/solutions.html
+  - {{ROOT}}/transactions.html
+  - {{ROOT}}/leadership.html
+  - {{ROOT}}/contact.html
+- Do not touch: /Users/andrewshea/Desktop/Websites/3650/3650 Ideas
+- Do not edit main /site version.
+- No rounded-card drift. No generic SaaS aesthetic.
+- Prefer structural composition changes over decorative tweaks.
+
+Quality bar (must enforce each loop):
+- No clipped or overflowing text at desktop/tablet/mobile.
+- Clear dominant visual gesture per page section.
+- Strong hierarchy (one primary, one secondary, supporting rhythm).
+- Section transitions feel intentional, not hard mechanical cuts.
+- Mobile readability and spacing are first-class.
+- No dead air caused by stretched columns, oversized lead blocks, or misweighted editorial headlines.
+- Portrait photography must keep heads and shoulders intact. Reject crops that cut scalps, foreheads, chins, or key facial features.
+- Subpages cannot feel under-imaged. If the live site has relevant source photography or headshots, use it.
+- Reject text-only leadership or transactions sections when source imagery exists for those subjects.
+
+Deliverables:
+- Updated HTML/CSS in this folder only.
+- New screenshots saved under this folder’s /review area.
+- Short iteration log: what changed, why, and what is still weak.
+
+{{KNOWN_ISSUES_BLOCK}}

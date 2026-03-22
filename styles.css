@@ -1,0 +1,102 @@
+:root {
+  color-scheme: light;
+  --bg: #f4efe7;
+  --ink: #1a1814;
+  --muted: #5a5349;
+  --line: rgba(26, 24, 20, 0.14);
+  --panel: rgba(255, 252, 247, 0.78);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top, rgba(133, 104, 66, 0.18), transparent 34%),
+    linear-gradient(180deg, #f7f1e8 0%, var(--bg) 100%);
+  color: var(--ink);
+}
+
+.site-header,
+main {
+  width: min(980px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 5rem 0 2rem;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  font: 600 0.8rem/1.2 "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.lede {
+  max-width: 42rem;
+  margin: 1.5rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  padding: 0 0 4rem;
+}
+
+.panel {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: var(--panel);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 60px rgba(49, 39, 20, 0.08);
+}
+
+.panel h2 {
+  margin-bottom: 0.65rem;
+  font-size: 1.55rem;
+}
+
+.panel p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.9em;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    padding-top: 3.5rem;
+  }
+
+  .lede,
+  .panel p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "midamerica-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "python3 -m http.server 4321 --bind 127.0.0.1",
+    "design:prompt": "node ./tools/loop/generate-prompt.mjs",
+    "design:capture": "node ./tools/loop/capture.mjs",
+    "design:checks": "node ./tools/loop/checks.mjs",
+    "design:critic": "node ./tools/loop/critic.mjs",
+    "design:apply": "node ./tools/loop/apply.mjs",
+    "design:loop": "node ./tools/loop/run-loop.mjs",
+    "capture:current": "node ./tools/forge/capture-current-site.mjs",
+    "capture:prototype": "node ./tools/forge/capture-prototype.mjs",
+    "capture:presentation": "node ./tools/forge/capture-presentation.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}

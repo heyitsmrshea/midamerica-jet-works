@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+review/automation/*.png
+review/automation/*.json
+review/automation/*.txt
+review/current-site/screenshots/
+review/current-site/manifest.json
+review/prototype/screenshots/
+review/prototype/manifest.json
+review/prototype/lighthouse-*.json
+review/presentation/screenshots/
+review/presentation/manifest.json
+review/redesign-loop/iterations/*/*.png
+review/redesign-loop/iterations/*/manifest.txt
+review/visual-qa/latest/
