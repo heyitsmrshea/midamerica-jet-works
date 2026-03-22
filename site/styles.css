@@ -24,6 +24,93 @@
   --progress: 0%;
 }
 
+@keyframes contrailDrift {
+  0% {
+    transform: translate3d(-3%, 12px, 0) scaleX(0.96);
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.38;
+  }
+  100% {
+    transform: translate3d(3%, -12px, 0) scaleX(1.04);
+    opacity: 0.18;
+  }
+}
+
+@keyframes horizonPan {
+  0% {
+    transform: scale(1.04) translate3d(-1.2%, 0.6%, 0);
+  }
+  100% {
+    transform: scale(1.08) translate3d(1.2%, -0.6%, 0);
+  }
+}
+
+@keyframes instrumentSweep {
+  0% {
+    transform: translateX(-130%);
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.42;
+  }
+  52% {
+    opacity: 0.16;
+  }
+  100% {
+    transform: translateX(130%);
+    opacity: 0;
+  }
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+@keyframes badgeGlide {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -8px;
+  }
+}
+
+@keyframes signalPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(185, 140, 86, 0.16);
+  }
+  50% {
+    box-shadow: 0 0 0 9px rgba(185, 140, 86, 0);
+  }
+}
+
+@keyframes buttonSweep {
+  0% {
+    transform: translateX(-140%);
+    opacity: 0;
+  }
+  14% {
+    opacity: 0.34;
+  }
+  30% {
+    opacity: 0.16;
+  }
+  100% {
+    transform: translateX(180%);
+    opacity: 0;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -298,6 +385,24 @@ textarea {
   transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
 }
 
+.button::after,
+.button-secondary::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  width: 24%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38), transparent);
+  transform: translateX(-140%);
+  pointer-events: none;
+  animation: buttonSweep 7.4s ease-in-out infinite;
+}
+
+.button-secondary::after {
+  background: linear-gradient(90deg, transparent, rgba(185, 140, 86, 0.3), transparent);
+  animation-delay: 1.2s;
+}
+
 .button:hover,
 .button-secondary:hover,
 .nav-toggle:hover {
@@ -372,6 +477,7 @@ textarea {
 .hero {
   position: relative;
   padding: calc(var(--hero-pad) - 1rem) 0 calc(var(--section-pad) * 0.85);
+  overflow: clip;
 }
 
 .hero::before {
@@ -382,6 +488,21 @@ textarea {
     radial-gradient(circle at top right, rgba(185, 140, 86, 0.18), transparent 22%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 38%);
   pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 8% -12% auto;
+  height: 220px;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.42) 18%, transparent 42%),
+    linear-gradient(90deg, transparent 14%, rgba(185, 140, 86, 0.12) 36%, transparent 60%),
+    linear-gradient(90deg, transparent 0%, rgba(155, 184, 208, 0.16) 52%, transparent 78%);
+  filter: blur(28px);
+  opacity: 0.42;
+  pointer-events: none;
+  animation: contrailDrift 16s ease-in-out infinite alternate;
 }
 
 .hero__inner {
@@ -529,6 +650,8 @@ textarea {
   position: relative;
   min-height: 560px;
   padding: 1rem;
+  perspective: 1200px;
+  transform-style: preserve-3d;
 }
 
 .hero-stage__frame,
@@ -544,6 +667,8 @@ textarea {
 .hero-stage__frame {
   inset: 3rem 1rem 0 5rem;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), var(--shadow);
+  transform: translate3d(0, var(--hero-shift, 0px), 0) rotateX(var(--hero-tilt, 0deg));
+  transition: transform 420ms ease-out;
 }
 
 .hero-stage__frame::before {
@@ -554,6 +679,7 @@ textarea {
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(18, 33, 48, 0.16)),
     radial-gradient(circle at 75% 18%, rgba(238, 198, 148, 0.2), transparent 24%);
   z-index: 1;
+  animation: instrumentSweep 9s linear infinite;
 }
 
 .hero-stage__frame::after {
@@ -579,6 +705,8 @@ textarea {
   height: 100%;
   object-fit: cover;
   opacity: 1;
+  animation: horizonPan 18s ease-in-out infinite alternate;
+  transform-origin: center;
 }
 
 .hero-stage__veil {
@@ -593,24 +721,30 @@ textarea {
 .hero-stage__card {
   padding: 1.05rem 1.15rem;
   backdrop-filter: blur(10px);
+  animation: floatCard 9s ease-in-out infinite;
+  transform: translate3d(0, calc(var(--card-shift, 0px) + var(--motion-y, 0px)), 0);
+  transition: transform 360ms ease-out;
 }
 
 .hero-stage__card--top {
   top: 0;
   left: 0;
   width: min(330px, 68%);
+  animation-delay: -1.1s;
 }
 
 .hero-stage__card--mid {
   bottom: 7.4rem;
   right: 0;
   width: min(300px, 58%);
+  animation-delay: -3.4s;
 }
 
 .hero-stage__card--bottom {
   bottom: 0;
   left: 2.2rem;
   width: min(360px, 72%);
+  animation-delay: -2.2s;
 }
 
 .hero-stage__label,
@@ -633,6 +767,10 @@ textarea {
   height: 1px;
   border-radius: 999px;
   background: linear-gradient(90deg, rgba(185, 140, 86, 0.9), rgba(185, 140, 86, 0.18));
+}
+
+.hero-stage__label::before {
+  animation: signalPulse 4.4s ease-in-out infinite;
 }
 
 .hero-stage__card p,
@@ -759,6 +897,8 @@ textarea {
 .editorial-photo {
   min-height: 430px;
   background: #c9d6e3;
+  transform: translate3d(0, var(--media-lift, 0px), 0);
+  transition: transform 420ms ease-out;
 }
 
 .editorial-photo::after {
@@ -778,6 +918,7 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  animation: horizonPan 20s ease-in-out infinite alternate;
 }
 
 .editorial-photo__badge {
@@ -791,6 +932,9 @@ textarea {
   background: rgba(248, 241, 231, 0.82);
   backdrop-filter: blur(10px);
   box-shadow: 0 16px 30px rgba(42, 35, 25, 0.14);
+  animation: badgeGlide 8.5s ease-in-out infinite;
+  transform: translate3d(0, var(--badge-shift, 0px), 0);
+  transition: transform 360ms ease-out;
 }
 
 .editorial-photo__badge strong {
@@ -865,7 +1009,7 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.32), transparent 34%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 38%);
   pointer-events: none;
 }
 
@@ -1282,6 +1426,8 @@ textarea {
   overflow: hidden;
   border: 1px solid rgba(18, 33, 48, 0.08);
   box-shadow: var(--shadow);
+  transform: translate3d(0, var(--media-lift, 0px), 0);
+  transition: transform 420ms ease-out;
 }
 
 .image-band::after {
@@ -1303,6 +1449,7 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  animation: horizonPan 22s ease-in-out infinite alternate;
 }
 
 .image-band__overlay {
@@ -1316,6 +1463,9 @@ textarea {
   background: rgba(248, 241, 231, 0.84);
   backdrop-filter: blur(12px);
   color: var(--text);
+  animation: badgeGlide 9s ease-in-out infinite;
+  transform: translate3d(0, var(--badge-shift, 0px), 0);
+  transition: transform 360ms ease-out;
 }
 
 .image-band__overlay p {
@@ -1495,6 +1645,11 @@ textarea {
   .hero-stage__frame::after,
   .image-band::after {
     width: min(190px, 46%);
+  }
+
+  .hero::after {
+    height: 120px;
+    opacity: 0.24;
   }
 
   .image-band {

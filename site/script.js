@@ -3,6 +3,7 @@ const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 const progress = document.querySelector(".progress");
 const forms = document.querySelectorAll("[data-ajax-form]");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 document.documentElement.classList.add("is-ready");
 
@@ -37,7 +38,7 @@ if (currentPage) {
 }
 
 const reveals = document.querySelectorAll("[data-reveal]");
-if (reveals.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (reveals.length && !prefersReducedMotion.matches) {
   reveals.forEach((node, index) => node.style.setProperty("--reveal-delay", `${Math.min(index * 70, 360)}ms`));
 
   const observer = new IntersectionObserver(
@@ -70,7 +71,7 @@ window.addEventListener("scroll", updateProgress, { passive: true });
 window.addEventListener("resize", updateProgress);
 
 const supportsFinePointer =
-  !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
+  !prefersReducedMotion.matches &&
   window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
 if (supportsFinePointer) {
@@ -127,7 +128,7 @@ for (const node of rotatingNodes) {
     .map((item) => item.trim())
     .filter(Boolean);
 
-  if (values.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  if (values.length < 2 || prefersReducedMotion.matches) {
     continue;
   }
 
@@ -136,6 +137,55 @@ for (const node of rotatingNodes) {
     index = (index + 1) % values.length;
     node.textContent = values[index];
   }, 2600);
+}
+
+if (!prefersReducedMotion.matches) {
+  const motionScenes = [
+    ...document.querySelectorAll(".hero-stage"),
+    ...document.querySelectorAll(".image-band"),
+    ...document.querySelectorAll(".editorial-photo")
+  ];
+
+  let motionFrame = 0;
+
+  const applySceneMotion = () => {
+    motionFrame = 0;
+    const viewportHeight = window.innerHeight || 1;
+
+    for (const scene of motionScenes) {
+      const rect = scene.getBoundingClientRect();
+      const centerOffset = (rect.top + rect.height / 2 - viewportHeight / 2) / viewportHeight;
+      const clamped = Math.max(-1, Math.min(1, centerOffset));
+      const lift = clamped * -18;
+      const badgeShift = clamped * -10;
+
+      scene.style.setProperty("--media-lift", `${lift}px`);
+      scene.style.setProperty("--badge-shift", `${badgeShift}px`);
+
+      if (scene.classList.contains("hero-stage")) {
+        scene.style.setProperty("--hero-shift", `${clamped * -22}px`);
+        scene.style.setProperty("--hero-tilt", `${clamped * 1.7}deg`);
+
+        const cards = scene.querySelectorAll(".hero-stage__card");
+        cards.forEach((card, index) => {
+          const direction = index === 1 ? -1 : 1;
+          card.style.setProperty("--motion-y", `${clamped * direction * 12}px`);
+        });
+      }
+    }
+  };
+
+  const requestSceneMotion = () => {
+    if (motionFrame) {
+      return;
+    }
+
+    motionFrame = window.requestAnimationFrame(applySceneMotion);
+  };
+
+  requestSceneMotion();
+  window.addEventListener("scroll", requestSceneMotion, { passive: true });
+  window.addEventListener("resize", requestSceneMotion);
 }
 
 async function submitForm(form) {
