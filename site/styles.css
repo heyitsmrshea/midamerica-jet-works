@@ -545,23 +545,22 @@ textarea {
 .section-label {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  margin-bottom: 0.8rem;
-  color: var(--muted);
-  font-size: 0.73rem;
+  gap: 0.65rem;
+  margin-bottom: 0.95rem;
+  color: rgba(18, 33, 48, 0.62);
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
 .hero-stage__label::before,
 .section-label::before {
   content: "";
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 1px;
   border-radius: 999px;
-  border: 1px solid rgba(18, 33, 48, 0.16);
-  background: radial-gradient(circle, rgba(185, 140, 86, 0.7) 0%, rgba(185, 140, 86, 0.08) 60%, transparent 70%);
+  background: linear-gradient(90deg, rgba(185, 140, 86, 0.9), rgba(185, 140, 86, 0.18));
 }
 
 .hero-stage__card p,
