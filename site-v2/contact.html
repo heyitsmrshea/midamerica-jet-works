@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Request Service | MidAmerica Jet Works</title>
+    <meta
+      name="description"
+      content="Start a service request with MidAmerica Jet Works. Coordinate maintenance, inspections, AOG support, or ownership services with a premium aircraft maintenance advisor in Sugar Grove, Illinois."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="contact">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="page-transition" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="./index.html" aria-label="MidAmerica Jet Works home">
+          <span class="brand__mark"><img src="./assets/brand-mark.svg" alt="" /></span>
+          <span class="brand__name">
+            <span class="brand__title">MidAmerica Jet Works</span>
+            <span class="brand__meta">Sugar Grove, Illinois</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="site-nav__links">
+            <li><a data-nav="home" href="./index.html">Home</a></li>
+            <li><a data-nav="services" href="./services.html">Services</a></li>
+            <li><a data-nav="capabilities" href="./capabilities.html">Capabilities</a></li>
+            <li><a data-nav="ownership" href="./ownership.html">Ownership</a></li>
+            <li><a data-nav="about" href="./about.html">About</a></li>
+            <li><a data-nav="contact" href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="topbar__actions">
+          <a class="pill" href="tel:+16304669297">Direct Line · (630) 466-9297</a>
+          <a class="button" href="./contact.html">Request Service</a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="nav-toggle__bars"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero hero--contact" id="hero">
+        <div class="hero__inner">
+          <div class="hero__copy" data-reveal>
+            <div class="eyebrow">Request Service</div>
+            <h1>Start the maintenance conversation with clarity and urgency.</h1>
+            <p class="hero__lead">
+              Use the intake form for scheduled work, AOG response, maintenance management, or ownership support. If the need is
+              time-sensitive, call directly and we will route the next step from there.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="#request">Start a service request</a>
+              <a class="button-secondary" href="tel:+16304669297">Call MidAmerica</a>
+            </div>
+          </div>
+
+          <div class="hero-stage" data-reveal>
+            <div class="hero-stage__frame">
+              <img src="./assets/photos/gulfstream-g650.jpg" alt="Business jet ready on the runway" />
+              <div class="hero-stage__veil"></div>
+            </div>
+            <article class="hero-stage__card hero-stage__card--top">
+              <div class="hero-stage__label">Immediate line</div>
+              <p>(630) 466-9297 for urgent coordination or time-sensitive maintenance needs.</p>
+            </article>
+            <article class="hero-stage__card hero-stage__card--mid">
+              <div class="hero-stage__label">Email intake</div>
+              <p>service@midamericajetworks.com for planned work, service planning, and general coordination.</p>
+            </article>
+            <article class="hero-stage__card hero-stage__card--bottom">
+              <div class="hero-stage__label">Concierge standard</div>
+              <p>Intake is treated as the beginning of the service experience, not a generic contact form moment.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="request">
+        <div class="section__inner">
+          <div class="contact-layout">
+            <div class="form-shell" data-reveal>
+              <div class="form-shell__intro">
+                <div class="section-label">Service Intake</div>
+                <h2>Start a service request</h2>
+                <p>Share the aircraft, the urgency, and the support needed. We will take it from there.</p>
+              </div>
+              <div class="intake-band">
+                <article class="intake-band__item">
+                  <strong>Best For</strong>
+                  <span>Planned work, urgent support, and longer-horizon maintenance coordination.</span>
+                </article>
+                <article class="intake-band__item">
+                  <strong>What To Send</strong>
+                  <span>Aircraft model, current airport, time pressure, and who needs updates.</span>
+                </article>
+                <article class="intake-band__item">
+                  <strong>For AOG</strong>
+                  <span>Call first so the next move is established immediately and cleanly.</span>
+                </article>
+              </div>
+
+              <form
+                action="https://formsubmit.co/ajax/service@midamericajetworks.com"
+                method="post"
+                data-ajax-form
+              >
+                <input type="hidden" name="_subject" value="MidAmerica Jet Works Service Request" />
+                <input type="hidden" name="_captcha" value="false" />
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required />
+                  </div>
+                  <div class="field">
+                    <label for="organization">Organization</label>
+                    <input id="organization" name="organization" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="role">Role</label>
+                    <input id="role" name="role" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required />
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" />
+                  </div>
+                  <div class="field">
+                    <label for="aircraft-model">Aircraft Model</label>
+                    <input id="aircraft-model" name="aircraft_model" type="text" required />
+                  </div>
+                  <div class="field">
+                    <label for="current-airport">Current Airport</label>
+                    <input id="current-airport" name="current_airport" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="service-needed">Service Needed</label>
+                    <select id="service-needed" name="service_needed" required>
+                      <option value="">Select service</option>
+                      <option>Scheduled maintenance</option>
+                      <option>Inspection planning</option>
+                      <option>AOG coordination</option>
+                      <option>Avionics and systems support</option>
+                      <option>Presentation readiness</option>
+                      <option>Maintenance management</option>
+                      <option>Technical evaluation</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="urgency">Urgency</label>
+                    <select id="urgency" name="urgency" required>
+                      <option value="">Select urgency</option>
+                      <option>Immediate / AOG</option>
+                      <option>Within 72 hours</option>
+                      <option>Within two weeks</option>
+                      <option>Planning ahead</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="preferred-contact">Preferred Contact Method</label>
+                    <select id="preferred-contact" name="preferred_contact_method">
+                      <option>Phone</option>
+                      <option>Email</option>
+                      <option>Either is fine</option>
+                    </select>
+                  </div>
+                  <div class="field field--wide">
+                    <label for="notes">Details</label>
+                    <textarea id="notes" name="details" placeholder="Tell us what matters, what is urgent, and what a successful outcome looks like."></textarea>
+                  </div>
+                </div>
+                <div class="form-shell__actions">
+                  <button class="button" type="submit">Start a service request</button>
+                  <a class="button-secondary" href="mailto:service@midamericajetworks.com">Email instead</a>
+                </div>
+                <div class="form-status" aria-live="polite"></div>
+              </form>
+            </div>
+
+            <div class="contact-rail contact-rail--compact">
+              <article class="contact-card--highlight" data-reveal>
+                <div class="section-label">Immediate Coordination</div>
+                <h3>Call first when the schedule is already under pressure.</h3>
+                <p class="contact-note">
+                  Use the direct line for AOG issues, urgent diagnosis, or any situation where the next move needs to be established immediately.
+                </p>
+                <ul class="contact-list">
+                  <li><a href="tel:+16304669297">(630) 466-9297</a></li>
+                  <li><a href="mailto:service@midamericajetworks.com">service@midamericajetworks.com</a></li>
+                </ul>
+              </article>
+              <div class="contact-meta-grid">
+                <article class="contact-grid__card contact-grid__card--compact" data-reveal>
+                  <div class="section-label">Response Standard</div>
+                  <h3>Call for urgency. Send for planning.</h3>
+                  <p class="contact-note">The first response should make the next action obvious, not create another layer of waiting.</p>
+                </article>
+                <article class="contact-grid__card contact-grid__card--compact" data-reveal id="location">
+                  <div class="section-label">Location</div>
+                  <h3>Sugar Grove, Illinois</h3>
+                  <p class="contact-note">43W520 US Highway 30. Midwest access with a discreet intake tone and serious maintenance posture.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="intake-flow">
+        <div class="section__inner">
+          <div class="section-heading" data-reveal>
+            <div class="section-label">What Happens Next</div>
+            <h2>Every inquiry should move cleanly from intake to action.</h2>
+          </div>
+          <div class="process-grid process-grid--three">
+            <article class="process-step" data-reveal>
+              <span class="process-step__index">01 · Initial Read</span>
+              <strong>We identify aircraft, urgency, and stakeholders.</strong>
+              <p>The first step is understanding who needs updates, what timing pressure exists, and where the aircraft sits.</p>
+            </article>
+            <article class="process-step" data-reveal>
+              <span class="process-step__index">02 · Recommended Move</span>
+              <strong>We route the most efficient next action.</strong>
+              <p>Planned work, urgent support, and management questions each get a different response path.</p>
+            </article>
+            <article class="process-step" data-reveal>
+              <span class="process-step__index">03 · Service Coordination</span>
+              <strong>We convert the inquiry into a managed support event.</strong>
+              <p>Once the path is clear, MidAmerica coordinates the work with the same tone clients expect through the rest of the relationship.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="close-section" id="close">
+        <div class="section__inner">
+          <div class="close-section__panel" data-reveal>
+            <div class="close-section__copy">
+              <div class="section-label">Ready When You Are</div>
+              <h2>The service experience starts at the first outreach.</h2>
+              <p>Tell us what is moving, what is at risk, and what “done right” needs to look like.</p>
+            </div>
+            <div class="close-section__actions">
+              <a class="button" href="#request">Start a service request</a>
+              <a class="button-secondary" href="tel:+16304669297">Call MidAmerica</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-grid">
+          <article class="footer-card" data-reveal>
+            <div class="section-label">Call</div>
+            <h3>Immediate coordination</h3>
+            <p><a href="tel:+16304669297">(630) 466-9297</a></p>
+          </article>
+          <article class="footer-card" data-reveal>
+            <div class="section-label">Email</div>
+            <h3>Planned maintenance support</h3>
+            <p><a href="mailto:service@midamericajetworks.com">service@midamericajetworks.com</a></p>
+          </article>
+          <article class="footer-card" data-reveal>
+            <div class="section-label">Base</div>
+            <h3>Sugar Grove, Illinois</h3>
+            <p>Aircraft maintenance, readiness support, and concierge-style intake for discerning clients.</p>
+          </article>
+        </div>
+        <div class="site-footer__bar">
+          <span>MidAmerica Jet Works</span>
+          <span>Request Service · <a href="./credits.html">Image credits</a></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

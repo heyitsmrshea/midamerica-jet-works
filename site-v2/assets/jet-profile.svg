@@ -1,0 +1,19 @@
+<svg width="920" height="560" viewBox="0 0 920 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="920" height="560" rx="40" fill="#0E1723"/>
+  <path d="M70 428H850" stroke="rgba(246,237,221,0.12)" stroke-width="2"/>
+  <path d="M130 384C236 374 402 358 482 337C577 312 658 279 737 240L838 188L857 206L780 263L731 300L758 301L816 297L836 308L782 323L716 330L600 407L553 414L611 349L520 363L363 420L326 423L404 376L292 383L237 391L195 412L149 417L174 393L130 384Z" fill="url(#paint0_linear_232_2)"/>
+  <path d="M319 215C392 185 479 170 604 167C667 165 741 170 789 178" stroke="rgba(185,140,86,0.75)" stroke-width="2"/>
+  <circle cx="726" cy="227" r="20" stroke="rgba(246,237,221,0.45)" stroke-width="2"/>
+  <path d="M0 0H920V560H0V0Z" fill="url(#paint1_radial_232_2)" fill-opacity="0.48"/>
+  <defs>
+    <linearGradient id="paint0_linear_232_2" x1="130" y1="305.5" x2="857" y2="305.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6D2B1"/>
+      <stop offset="0.4" stop-color="#F6EDDD"/>
+      <stop offset="1" stop-color="#8D6944"/>
+    </linearGradient>
+    <radialGradient id="paint1_radial_232_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(614 102) rotate(141.817) scale(524.173 496.767)">
+      <stop stop-color="#DFA96C"/>
+      <stop offset="1" stop-color="#0E1723" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
