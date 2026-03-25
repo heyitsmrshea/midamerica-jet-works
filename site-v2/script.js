@@ -54,6 +54,10 @@ if (reveals.length && !prefersReducedMotion.matches) {
   );
 
   reveals.forEach((node) => observer.observe(node));
+
+  window.setTimeout(() => {
+    reveals.forEach((node) => node.classList.add("is-visible"));
+  }, 1800);
 } else {
   reveals.forEach((node) => node.classList.add("is-visible"));
 }
@@ -137,6 +141,39 @@ for (const node of rotatingNodes) {
     index = (index + 1) % values.length;
     node.textContent = values[index];
   }, 2600);
+}
+
+const typewriterNodes = document.querySelectorAll("[data-typewriter]");
+for (const node of typewriterNodes) {
+  const fullText = (node.getAttribute("data-typewriter") || node.textContent || "").trim();
+
+  if (!fullText) {
+    continue;
+  }
+
+  node.setAttribute("aria-label", fullText);
+
+  if (prefersReducedMotion.matches) {
+    node.textContent = fullText;
+    continue;
+  }
+
+  node.textContent = "";
+  node.classList.add("is-typing");
+
+  let index = 0;
+  const tick = () => {
+    index += 1;
+    node.textContent = fullText.slice(0, index);
+
+    if (index < fullText.length) {
+      window.setTimeout(tick, 14);
+    } else {
+      node.classList.remove("is-typing");
+    }
+  };
+
+  window.setTimeout(tick, 120);
 }
 
 if (!prefersReducedMotion.matches) {
