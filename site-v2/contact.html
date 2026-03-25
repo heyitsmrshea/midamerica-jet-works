@@ -115,6 +115,7 @@
                 <input type="hidden" name="_subject" value="MidAmerica Jet Works Service Request" />
                 <input type="hidden" name="_captcha" value="false" />
                 <div class="form-grid">
+                  <div class="field-group-label field--wide">Contact & principal details</div>
                   <div class="field">
                     <label for="name">Name</label>
                     <input id="name" name="name" type="text" required />
@@ -135,6 +136,7 @@
                     <label for="phone">Phone</label>
                     <input id="phone" name="phone" type="tel" />
                   </div>
+                  <div class="field-group-label field--wide">Aircraft & scheduling context</div>
                   <div class="field">
                     <label for="aircraft-model">Aircraft Model</label>
                     <input id="aircraft-model" name="aircraft_model" type="text" required />
@@ -174,6 +176,7 @@
                       <option>Either is fine</option>
                     </select>
                   </div>
+                  <div class="field-group-label field--wide">Operating notes</div>
                   <div class="field field--wide">
                     <label for="notes">Details</label>
                     <textarea id="notes" name="details" placeholder="Tell us what matters, what is urgent, and what a successful outcome looks like."></textarea>
@@ -188,7 +191,7 @@
             </div>
 
             <div class="contact-rail contact-rail--compact">
-              <article class="contact-card--highlight" data-reveal>
+              <article class="contact-card--highlight contact-card--console" data-reveal>
                 <div class="section-label">Immediate Coordination</div>
                 <h3>Call first when the schedule is already under pressure.</h3>
                 <p class="contact-note">
@@ -200,12 +203,12 @@
                 </ul>
               </article>
               <div class="contact-meta-grid">
-                <article class="contact-grid__card contact-grid__card--compact" data-reveal>
+                <article class="contact-grid__card contact-grid__card--compact contact-grid__card--signal" data-reveal>
                   <div class="section-label">Response Standard</div>
                   <h3>Call for urgency. Send for planning.</h3>
                   <p class="contact-note">The first response should make the next action obvious, not create another layer of waiting.</p>
                 </article>
-                <article class="contact-grid__card contact-grid__card--compact" data-reveal id="location">
+                <article class="contact-grid__card contact-grid__card--compact contact-grid__card--signal" data-reveal id="location">
                   <div class="section-label">Location</div>
                   <h3>Sugar Grove, Illinois</h3>
                   <p class="contact-note">43W520 US Highway 30. Midwest access with a discreet intake tone and serious maintenance posture.</p>
