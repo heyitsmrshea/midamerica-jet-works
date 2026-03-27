@@ -57,7 +57,7 @@ if (reveals.length && !prefersReducedMotion.matches) {
 
   window.setTimeout(() => {
     reveals.forEach((node) => node.classList.add("is-visible"));
-  }, 1800);
+  }, 900);
 } else {
   reveals.forEach((node) => node.classList.add("is-visible"));
 }
@@ -167,13 +167,13 @@ for (const node of typewriterNodes) {
     node.textContent = fullText.slice(0, index);
 
     if (index < fullText.length) {
-      window.setTimeout(tick, 14);
+      window.setTimeout(tick, 8);
     } else {
       node.classList.remove("is-typing");
     }
   };
 
-  window.setTimeout(tick, 120);
+  window.setTimeout(tick, 40);
 }
 
 if (!prefersReducedMotion.matches) {
