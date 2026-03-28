@@ -8653,3 +8653,460 @@ body[data-page="home"] .hero--home .hero__notes {
     width: min(150px, 36%);
   }
 }
+
+/* Ruthless cleanup pass: collapse repeated box logic and rebalance major sections */
+.topbar__actions .pill,
+.topbar__actions .button {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.topbar__actions .pill {
+  padding: 0 1.5rem 0 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: rgba(18, 33, 48, 0.68) !important;
+}
+
+.topbar__actions .button {
+  padding: 0 0 0 1.5rem !important;
+  min-height: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-left: 1px solid rgba(18, 33, 48, 0.12) !important;
+  color: var(--text) !important;
+}
+
+.topbar__actions .button::after {
+  content: "\2192";
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+body[data-page="home"] .hero--home .hero__inner {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr) !important;
+  gap: clamp(2.6rem, 4.2vw, 5rem) !important;
+  align-items: end !important;
+}
+
+body[data-page="home"] .hero--home .hero__copy {
+  max-width: 47rem !important;
+}
+
+body[data-page="home"] .hero--home h1 {
+  max-width: 13.2ch !important;
+  font-size: clamp(3rem, 4.75vw, 4.5rem) !important;
+  line-height: 0.9 !important;
+  letter-spacing: -0.045em !important;
+}
+
+body[data-page="home"] .hero-stage--home {
+  max-width: 720px !important;
+  width: 100%;
+  margin-left: auto !important;
+}
+
+body[data-page="home"] .hero-stage--home .hero-stage__frame {
+  min-height: 640px !important;
+  background: rgba(208, 204, 196, 0.72) !important;
+}
+
+body[data-page="home"] .hero-stage--home .hero-stage__frame img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 58% center !important;
+}
+
+body[data-page="home"] .hero-stage--home .hero-stage__frame::after {
+  display: none !important;
+}
+
+body[data-page="home"] .hero--home .hero__notes {
+  margin-top: 1.75rem !important;
+}
+
+body[data-page="home"] .hero--home .hero__note {
+  padding-bottom: 0.2rem !important;
+}
+
+body[data-page="home"] .section--home-command > .section__inner,
+body[data-page="services"] .section--service-deck > .section__inner,
+body[data-page="ownership"] .section--ownership-split > .section__inner,
+body[data-page="about"] .values-ledger,
+body[data-page="contact"] .section--intake-console > .section__inner {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body[data-page="home"] .section--home-command .section__inner {
+  padding-top: 0.5rem !important;
+}
+
+.command-strip,
+.service-deck__matrix,
+.copy-block__stats,
+.values-ledger__items,
+.contact-meta-grid {
+  gap: 1rem !important;
+}
+
+.command-cell,
+.service-deck__cell,
+.metric-card,
+.values-ledger__item,
+.contact-grid__card,
+.contact-card--highlight,
+.process-step,
+.info-card,
+.audience-panel,
+.detail-card,
+.principle-block,
+.support-rail__item {
+  border-radius: 16px !important;
+  box-shadow: none !important;
+}
+
+body[data-page="home"] .section--home-command .command-strip {
+  grid-template-columns: minmax(0, 1.35fr) repeat(2, minmax(0, 0.82fr)) !important;
+  align-items: stretch !important;
+}
+
+body[data-page="home"] .section--home-command .command-cell,
+body[data-page="ownership"] .section--ownership-split .command-cell {
+  min-height: 0 !important;
+  background: rgba(255, 252, 246, 0.82) !important;
+  border: 1px solid rgba(18, 33, 48, 0.08) !important;
+}
+
+body[data-page="home"] .section--home-command .command-cell--wide {
+  background: linear-gradient(180deg, rgba(249, 243, 233, 0.96), rgba(246, 238, 226, 0.92)) !important;
+}
+
+body[data-page="home"] .section--home-command .command-cell--dark,
+body[data-page="ownership"] .section--ownership-split .command-cell--shared {
+  background: linear-gradient(180deg, rgba(241, 226, 196, 0.98), rgba(234, 214, 177, 0.94)) !important;
+  color: var(--text) !important;
+}
+
+body[data-page="home"] .section--home-command .command-cell--dark h3,
+body[data-page="home"] .section--home-command .command-cell--dark p,
+body[data-page="home"] .section--home-command .command-cell--dark .command-cell__eyebrow,
+body[data-page="ownership"] .section--ownership-split .command-cell--shared h3,
+body[data-page="ownership"] .section--ownership-split .command-cell--shared p,
+body[data-page="ownership"] .section--ownership-split .command-cell--shared .command-cell__eyebrow {
+  color: var(--text) !important;
+}
+
+body[data-page="home"] .section--home-proof .copy-block,
+body[data-page="ownership"] .copy-block {
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 1.2rem !important;
+}
+
+.copy-block__panel {
+  background: rgba(255, 252, 246, 0.8) !important;
+  border: 1px solid rgba(18, 33, 48, 0.08) !important;
+  box-shadow: none !important;
+}
+
+.copy-block__stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.metric-card {
+  min-height: 0 !important;
+  padding: 1.2rem 1.1rem !important;
+  background: rgba(255, 252, 246, 0.84) !important;
+  border: 1px solid rgba(18, 33, 48, 0.08) !important;
+}
+
+.metric-card:nth-child(2) {
+  background: linear-gradient(180deg, rgba(241, 226, 196, 0.96), rgba(236, 220, 187, 0.9)) !important;
+}
+
+.metric-card:nth-child(2) strong,
+.metric-card:nth-child(2) span,
+.metric-card:nth-child(2) .metric-card__value {
+  color: var(--text) !important;
+}
+
+body[data-page="services"] .services-hero {
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr) !important;
+  gap: clamp(2.25rem, 4vw, 4.25rem) !important;
+  align-items: start !important;
+}
+
+body[data-page="services"] .services-hero__stage {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+body[data-page="services"] .services-hero__frame {
+  min-height: 620px !important;
+}
+
+body[data-page="services"] .services-hero__signal {
+  left: 1.1rem !important;
+  right: auto !important;
+  bottom: 1.1rem !important;
+  width: min(330px, calc(100% - 2.2rem)) !important;
+}
+
+body[data-page="services"] .services-hero__rail {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  border-top: 1px solid rgba(18, 33, 48, 0.08) !important;
+}
+
+body[data-page="services"] .services-hero__note {
+  min-height: 0 !important;
+  padding: 1rem 1.1rem 0.25rem !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-left: 1px solid rgba(18, 33, 48, 0.08) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body[data-page="services"] .services-hero__note:first-child {
+  padding-left: 0 !important;
+  border-left: 0 !important;
+}
+
+body[data-page="services"] .service-deck__feature {
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr) !important;
+  gap: 1rem !important;
+  padding: 1rem !important;
+  background: rgba(255, 252, 246, 0.78) !important;
+  border: 1px solid rgba(18, 33, 48, 0.08) !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+}
+
+body[data-page="services"] .service-deck__feature-copy {
+  padding: 0.35rem 0.2rem 0.2rem !important;
+}
+
+body[data-page="services"] .service-deck__matrix {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}
+
+body[data-page="services"] .service-deck__cell {
+  min-height: 0 !important;
+  background: rgba(255, 252, 246, 0.8) !important;
+  border: 1px solid rgba(18, 33, 48, 0.08) !important;
+}
+
+body[data-page="services"] .service-deck__cell--warm,
+body[data-page="services"] .service-deck__cell--dark {
+  background: linear-gradient(180deg, rgba(241, 226, 196, 0.96), rgba(236, 220, 187, 0.9)) !important;
+  color: var(--text) !important;
+}
+
+body[data-page="services"] .service-deck__cell--warm h3,
+body[data-page="services"] .service-deck__cell--warm p,
+body[data-page="services"] .service-deck__cell--warm .grid-card__eyebrow,
+body[data-page="services"] .service-deck__cell--dark h3,
+body[data-page="services"] .service-deck__cell--dark p,
+body[data-page="services"] .service-deck__cell--dark .grid-card__eyebrow {
+  color: var(--text) !important;
+}
+
+body[data-page="ownership"] .section--ownership-split .command-strip--ownership {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+body[data-page="ownership"] .section--ownership-split .command-cell--owner,
+body[data-page="ownership"] .section--ownership-split .command-cell--operator {
+  background: rgba(255, 252, 246, 0.82) !important;
+  color: var(--text) !important;
+}
+
+body[data-page="ownership"] .section--ownership-split .command-cell--owner h3,
+body[data-page="ownership"] .section--ownership-split .command-cell--owner p,
+body[data-page="ownership"] .section--ownership-split .command-cell--owner .command-cell__eyebrow,
+body[data-page="ownership"] .section--ownership-split .command-cell--operator h3,
+body[data-page="ownership"] .section--ownership-split .command-cell--operator p,
+body[data-page="ownership"] .section--ownership-split .command-cell--operator .command-cell__eyebrow {
+  color: var(--text) !important;
+}
+
+body[data-page="ownership"] .ownership-grid,
+body[data-page="contact"] .contact-layout,
+body[data-page="about"] .principles-layout {
+  gap: 1rem !important;
+}
+
+body[data-page="about"] .values-ledger {
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr) !important;
+  gap: 1rem !important;
+}
+
+body[data-page="about"] .values-ledger__item {
+  background: rgba(255, 252, 246, 0.82) !important;
+  border: 1px solid rgba(18, 33, 48, 0.08) !important;
+}
+
+body[data-page="contact"] .contact-hero__stack,
+body[data-page="contact"] .contact-meta-grid {
+  gap: 0.9rem !important;
+}
+
+body[data-page="contact"] .contact-hero__card,
+body[data-page="contact"] .contact-grid__card,
+body[data-page="contact"] .contact-card--highlight {
+  background: rgba(255, 252, 246, 0.86) !important;
+  border: 1px solid rgba(18, 33, 48, 0.08) !important;
+}
+
+body[data-page="contact"] .contact-card--highlight {
+  background: linear-gradient(180deg, rgba(241, 226, 196, 0.96), rgba(236, 220, 187, 0.9)) !important;
+}
+
+@media (max-width: 1120px) {
+  body[data-page="services"] .service-deck__matrix {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body[data-page="services"] .services-hero__rail {
+    grid-template-columns: 1fr !important;
+  }
+
+  body[data-page="services"] .services-hero__note {
+    padding-left: 0 !important;
+    border-left: 0 !important;
+    border-top: 1px solid rgba(18, 33, 48, 0.08) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar__actions .pill,
+  .topbar__actions .button {
+    padding: 0 !important;
+    border-left: 0 !important;
+  }
+
+  body[data-page="home"] .hero--home h1 {
+    max-width: 8.7ch !important;
+    font-size: clamp(2.8rem, 11vw, 4rem) !important;
+  }
+
+  body[data-page="home"] .hero-stage--home .hero-stage__frame {
+    min-height: 360px !important;
+  }
+
+  body[data-page="home"] .hero--home .hero__notes,
+  .copy-block__stats,
+  body[data-page="services"] .service-deck__matrix,
+  body[data-page="services"] .services-hero__rail,
+  body[data-page="ownership"] .section--ownership-split .command-strip--ownership,
+  body[data-page="about"] .values-ledger,
+  body[data-page="about"] .values-ledger__items,
+  body[data-page="contact"] .contact-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  body[data-page="services"] .services-hero,
+  body[data-page="services"] .service-deck__feature {
+    grid-template-columns: 1fr !important;
+  }
+
+  body[data-page="services"] .services-hero__frame {
+    min-height: 430px !important;
+  }
+}
+
+/* Ruthless cleanup pass 2: kill remaining tall wraps and dark feature fallback */
+body[data-page="home"] .hero--home h1 {
+  max-width: 14.6ch !important;
+  font-size: clamp(2.8rem, 4.35vw, 4.1rem) !important;
+}
+
+body[data-page="home"] .hero-stage--home .hero-stage__frame {
+  min-height: 540px !important;
+}
+
+body[data-page="home"] .hero-stage--home .hero-stage__frame img {
+  object-position: 62% 18% !important;
+}
+
+body[data-page="home"] .hero--home .hero__notes {
+  padding-top: 0.8rem !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(18, 33, 48, 0.12) !important;
+  border-radius: 0 !important;
+}
+
+body[data-page="services"] .service-deck__feature-copy,
+body[data-page="services"] .service-deck__feature-copy h3,
+body[data-page="services"] .service-deck__feature-copy p,
+body[data-page="services"] .service-deck__feature-copy li,
+body[data-page="services"] .service-deck__feature-copy .grid-card__eyebrow {
+  color: var(--text) !important;
+}
+
+body[data-page="services"] .service-deck__feature-media {
+  min-height: 360px !important;
+}
+
+body[data-page="services"] .service-deck__feature-media::after {
+  display: none !important;
+}
+
+body[data-page="services"] .close-section__panel,
+body[data-page="ownership"] .close-section__panel,
+body[data-page="about"] .close-section__panel,
+body[data-page="contact"] .close-section__panel,
+body[data-page="capabilities"] .close-section__panel {
+  background: linear-gradient(180deg, rgba(14, 30, 47, 0.97), rgba(20, 45, 68, 0.94)) !important;
+  box-shadow: 0 26px 50px rgba(12, 27, 43, 0.14) !important;
+}
+
+body[data-page="ownership"] .section--ownership-split .command-cell h3 {
+  font-size: clamp(1.6rem, 2.1vw, 2.2rem) !important;
+  line-height: 0.98 !important;
+}
+
+body[data-page="ownership"] .ownership-hero__frame img {
+  object-position: 50% 42% !important;
+}
+
+body[data-page="about"] .about-hero__quote {
+  min-height: 0 !important;
+}
+
+body[data-page="about"] .about-hero__ledger article:nth-child(2) {
+  background: linear-gradient(180deg, rgba(241, 226, 196, 0.96), rgba(236, 220, 187, 0.9)) !important;
+}
+
+body[data-page="about"] .about-hero__ledger article:nth-child(2) p,
+body[data-page="about"] .about-hero__ledger article:nth-child(2) .section-label {
+  color: var(--text) !important;
+}
+
+body[data-page="contact"] .contact-hero__desk {
+  grid-template-columns: minmax(0, 1fr) 250px !important;
+}
+
+body[data-page="contact"] .contact-hero__card {
+  padding: 0.9rem 0.95rem 0.95rem !important;
+}
+
+body[data-page="contact"] .contact-card--highlight h3,
+body[data-page="contact"] .contact-card--highlight p,
+body[data-page="contact"] .contact-card--highlight .section-label,
+body[data-page="contact"] .contact-card--highlight .contact-list li,
+body[data-page="contact"] .contact-card--highlight .contact-list a {
+  color: var(--text) !important;
+}
+
+@media (max-width: 720px) {
+  body[data-page="home"] .hero--home h1 {
+    max-width: 9.6ch !important;
+    font-size: clamp(2.55rem, 9vw, 3.6rem) !important;
+  }
+}
