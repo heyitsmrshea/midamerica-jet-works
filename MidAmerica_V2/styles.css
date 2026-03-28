@@ -8566,3 +8566,90 @@ body[data-page="home"] .hero-stage--home .hero-stage__frame-note li {
 body[data-page="home"] .hero-stage--home .hero-stage__rail {
   display: none !important;
 }
+
+/* Completion pass 4: simplify and rebalance the home hero */
+body[data-page="home"] .hero--home .hero__inner {
+  grid-template-columns: minmax(0, 0.94fr) minmax(520px, 0.92fr) !important;
+  align-items: start;
+}
+
+body[data-page="home"] .hero--home .hero__copy {
+  max-width: 43rem;
+}
+
+body[data-page="home"] .hero--home h1 {
+  max-width: 11.4ch;
+  font-size: clamp(3.55rem, 5.6vw, 5.15rem);
+  line-height: 0.9;
+}
+
+body[data-page="home"] .hero-stage--home {
+  display: block !important;
+  max-width: 640px;
+  margin-left: auto;
+  padding-top: 0.4rem;
+}
+
+body[data-page="home"] .hero-stage--home .hero-stage__frame {
+  min-height: 600px;
+  inset: auto !important;
+  border-radius: 28px;
+  overflow: hidden !important;
+  box-shadow: 0 34px 72px rgba(12, 27, 43, 0.16);
+}
+
+body[data-page="home"] .hero-stage--home .hero-stage__frame::after {
+  left: auto;
+  right: 1.15rem;
+  top: auto;
+  bottom: 1.15rem;
+  width: min(210px, 34%);
+  aspect-ratio: 1.38;
+  opacity: 0.94;
+}
+
+body[data-page="home"] .hero-stage--home .hero-stage__frame-note,
+body[data-page="home"] .hero-stage--home .hero-stage__rail {
+  display: none !important;
+}
+
+body[data-page="home"] .hero--home .hero__notes {
+  margin-top: 1.85rem;
+}
+
+@media (max-width: 1120px) {
+  body[data-page="home"] .hero--home .hero__inner {
+    grid-template-columns: minmax(0, 0.98fr) minmax(420px, 0.88fr) !important;
+  }
+
+  body[data-page="home"] .hero-stage--home {
+    max-width: 560px;
+  }
+
+  body[data-page="home"] .hero-stage--home .hero-stage__frame {
+    min-height: 540px;
+  }
+}
+
+@media (max-width: 720px) {
+  body[data-page="home"] .hero--home .hero__inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  body[data-page="home"] .hero-stage--home {
+    max-width: none;
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  body[data-page="home"] .hero-stage--home .hero-stage__frame {
+    min-height: 420px;
+    border-radius: 22px;
+  }
+
+  body[data-page="home"] .hero-stage--home .hero-stage__frame::after {
+    right: 0.9rem;
+    bottom: 0.9rem;
+    width: min(150px, 36%);
+  }
+}
