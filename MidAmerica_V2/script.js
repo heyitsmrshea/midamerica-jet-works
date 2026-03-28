@@ -39,7 +39,7 @@ if (currentPage) {
 
 const reveals = document.querySelectorAll("[data-reveal]");
 if (reveals.length && !prefersReducedMotion.matches) {
-  reveals.forEach((node, index) => node.style.setProperty("--reveal-delay", `${Math.min(index * 70, 360)}ms`));
+  reveals.forEach((node, index) => node.style.setProperty("--reveal-delay", `${Math.min(index * 38, 160)}ms`));
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -57,7 +57,7 @@ if (reveals.length && !prefersReducedMotion.matches) {
 
   window.setTimeout(() => {
     reveals.forEach((node) => node.classList.add("is-visible"));
-  }, 900);
+  }, 180);
 } else {
   reveals.forEach((node) => node.classList.add("is-visible"));
 }
