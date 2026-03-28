@@ -9027,11 +9027,12 @@ body[data-page="home"] .hero--home h1 {
 }
 
 body[data-page="home"] .hero-stage--home .hero-stage__frame {
-  min-height: 540px !important;
+  min-height: 470px !important;
 }
 
 body[data-page="home"] .hero-stage--home .hero-stage__frame img {
-  object-position: 62% 18% !important;
+  object-position: 63% 48% !important;
+  transform: scale(1.14) !important;
 }
 
 body[data-page="home"] .hero--home .hero__notes {
@@ -9047,6 +9048,18 @@ body[data-page="services"] .service-deck__feature-copy p,
 body[data-page="services"] .service-deck__feature-copy li,
 body[data-page="services"] .service-deck__feature-copy .grid-card__eyebrow {
   color: var(--text) !important;
+}
+
+body[data-page="services"] .service-deck__feature-copy {
+  padding: 1.2rem 1.25rem !important;
+  border-top: 1px solid rgba(18, 33, 48, 0.12) !important;
+  background: linear-gradient(180deg, rgba(255, 252, 246, 0.94), rgba(246, 238, 226, 0.86)) !important;
+  box-shadow: none !important;
+}
+
+body[data-page="services"] .service-deck__feature-copy .service-feature__list li::before {
+  background: linear-gradient(135deg, rgba(209, 170, 120, 0.98), rgba(241, 226, 196, 0.92)) !important;
+  box-shadow: none !important;
 }
 
 body[data-page="services"] .service-deck__feature-media {
@@ -9108,5 +9121,48 @@ body[data-page="contact"] .contact-card--highlight .contact-list a {
   body[data-page="home"] .hero--home h1 {
     max-width: 9.6ch !important;
     font-size: clamp(2.55rem, 9vw, 3.6rem) !important;
+  }
+
+  body[data-page="home"] .hero-stage--home .hero-stage__frame {
+    min-height: 300px !important;
+  }
+
+  body[data-page="home"] .hero-stage--home .hero-stage__frame img {
+    object-position: 60% 50% !important;
+    transform: scale(1.18) !important;
+  }
+
+  body[data-page="home"] .hero--home .hero__note,
+  body[data-page="services"] .service-deck__cell,
+  body[data-page="services"] .services-hero__note,
+  body[data-page="ownership"] .command-cell,
+  body[data-page="ownership"] .audience-panel,
+  body[data-page="ownership"] .info-card,
+  body[data-page="about"] .values-ledger__item,
+  body[data-page="about"] .principle-block,
+  body[data-page="contact"] .contact-grid__card,
+  body[data-page="contact"] .contact-card--highlight,
+  .metric-card,
+  .process-step,
+  .detail-card,
+  .support-rail__item {
+    padding: 0.88rem 0.9rem !important;
+  }
+
+  body[data-page="home"] .hero--home .hero__notes {
+    margin-top: 1.25rem !important;
+    gap: 0.45rem !important;
+  }
+
+  body[data-page="services"] .services-hero__signal {
+    width: calc(100% - 1.6rem) !important;
+    max-width: none !important;
+    left: 0.8rem !important;
+    bottom: 0.8rem !important;
+  }
+
+  body[data-page="contact"] .contact-hero__desk,
+  body[data-page="contact"] .contact-hero__stack {
+    grid-template-columns: 1fr !important;
   }
 }
