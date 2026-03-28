@@ -5665,6 +5665,16 @@ body::after {
   padding: 1rem 0 0;
 }
 
+.service-deck__intro .section-label,
+.service-deck__intro .section__lead {
+  color: rgba(18, 33, 48, 0.72);
+}
+
+.service-deck__intro .section-heading h2,
+.service-deck__intro h2 {
+  color: var(--text);
+}
+
 .service-deck__feature {
   grid-column: 5 / -1;
   gap: 0;
@@ -5684,9 +5694,23 @@ body::after {
   box-shadow: 0 28px 64px rgba(12, 27, 43, 0.16);
 }
 
+.service-deck__feature-copy .grid-card__eyebrow,
+.service-deck__feature-copy h3 {
+  color: rgba(245, 248, 250, 0.96);
+}
+
 .service-deck__feature-copy p,
 .service-deck__feature-copy li {
-  color: rgba(245, 248, 250, 0.76);
+  color: rgba(245, 248, 250, 0.88);
+}
+
+.service-deck__feature-copy .service-feature__list li {
+  color: rgba(245, 248, 250, 0.9);
+}
+
+.service-deck__feature-copy .service-feature__list li::before {
+  background: linear-gradient(135deg, rgba(246, 237, 221, 0.98), rgba(209, 170, 120, 0.92));
+  box-shadow: 0 0 0 4px rgba(209, 170, 120, 0.12);
 }
 
 .service-deck__feature-media {
@@ -5728,7 +5752,7 @@ body::after {
 
 .service-deck__cell p,
 .service-deck__cell .grid-card__eyebrow {
-  color: var(--muted);
+  color: rgba(18, 33, 48, 0.78);
 }
 
 .service-deck__cell--warm,
@@ -5758,7 +5782,7 @@ body::after {
 
 .service-deck__cell--dark p,
 .service-deck__cell--dark .grid-card__eyebrow {
-  color: rgba(245, 248, 250, 0.74);
+  color: rgba(245, 248, 250, 0.84);
 }
 
 .section--service-runway > .section__inner {
