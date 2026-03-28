@@ -48,8 +48,8 @@
 
     <main id="main-content">
       <section class="hero hero--about" id="hero">
-        <div class="hero__inner">
-          <div class="hero__copy" data-reveal>
+        <div class="section__inner about-hero">
+          <div class="about-hero__copy" data-reveal>
             <div class="eyebrow">About MidAmerica</div>
             <h1>Readiness built on dignity, discipline, and care.</h1>
             <p class="hero__lead">
@@ -62,58 +62,69 @@
             </div>
           </div>
 
-          <div class="hero-stage" data-reveal>
-            <div class="hero-stage__frame">
-              <img src="./assets/photos/hangar-interior.jpg" alt="Spacious aircraft hangar interior" />
-              <div class="hero-stage__veil"></div>
+          <div class="about-hero__manifesto" data-reveal>
+            <div class="about-hero__quote">
+              <div class="section-label">Operating belief</div>
+              <h2>We behave as though every aircraft entrusted to us belongs to someone who notices everything.</h2>
             </div>
-            <article class="hero-stage__card hero-stage__card--top">
-              <div class="hero-stage__label">Mission</div>
-              <p>Keep exceptional aircraft ready with white-glove technical care, speed, and discretion.</p>
-            </article>
-            <article class="hero-stage__card hero-stage__card--mid">
-              <div class="hero-stage__label">Promise</div>
-              <p>Precision without drama. Readiness without compromise.</p>
-            </article>
-            <article class="hero-stage__card hero-stage__card--bottom">
-              <div class="hero-stage__label">Positioning</div>
-              <p>Premium maintenance partner for owners, family offices, and flight departments across the Midwest.</p>
-            </article>
+            <div class="about-hero__media">
+              <img src="./assets/photos/hangar-interior.jpg" alt="Spacious aircraft hangar interior" />
+            </div>
+            <div class="about-hero__ledger">
+              <article>
+                <div class="section-label">Mission</div>
+                <p>Keep exceptional aircraft ready with white-glove technical care, speed, and discretion.</p>
+              </article>
+              <article>
+                <div class="section-label">Promise</div>
+                <p>Precision without drama. Readiness without compromise.</p>
+              </article>
+              <article>
+                <div class="section-label">Positioning</div>
+                <p>Premium maintenance partner for owners, family offices, and flight departments across the Midwest.</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section section--values-matrix" id="values">
         <div class="section__inner">
-          <div class="section-heading" data-reveal>
-            <div class="section-label">Values</div>
-            <h2>The values are written to govern behavior, not decorate a wall.</h2>
-          </div>
-          <div class="values-grid values-grid--manifesto">
-            <article class="value-card value-card--lead" data-reveal>
-              <h3>Craftsmanship</h3>
-              <p>The work should feel exacting in the details clients see and the ones they never do.</p>
-            </article>
-            <article class="value-card" data-reveal>
-              <h3>Accountability</h3>
-              <p>We own the next step, the communication, and the outcome rather than hiding behind process theater.</p>
-            </article>
-            <article class="value-card" data-reveal>
-              <h3>Urgency with control</h3>
-              <p>Speed matters, but composure is part of the service. Clients should feel steadied, not rushed.</p>
-            </article>
-            <article class="value-card" data-reveal>
-              <h3>Discretion</h3>
-              <p>Aircraft movements, ownership realities, and maintenance conversations are treated with respect and restraint.</p>
-            </article>
-            <article class="value-card" data-reveal>
-              <h3>Owner-level care</h3>
-              <p>Whether the client is a principal or a department, the aircraft is handled like it genuinely matters.</p>
-            </article>
-            <article class="value-card" data-reveal>
-              <h3>Technical mastery</h3>
-              <p>Brand sophistication only counts if the underlying maintenance culture is disciplined and real.</p>
-            </article>
+          <div class="values-ledger">
+            <div class="values-ledger__intro" data-reveal>
+              <div class="section-label">Values</div>
+              <h2>The values are written to govern behavior, not decorate a wall.</h2>
+              <p class="section__lead">
+                These are working standards. If a value cannot be seen in an intake, update, repair event, or handoff, it does
+                not count.
+              </p>
+            </div>
+            <div class="values-ledger__items">
+              <article class="values-ledger__item" data-reveal>
+                <strong>Craftsmanship</strong>
+                <p>The work should feel exacting in the details clients see and the ones they never do.</p>
+              </article>
+              <article class="values-ledger__item" data-reveal>
+                <strong>Accountability</strong>
+                <p>We own the next step, the communication, and the outcome rather than hiding behind process theater.</p>
+              </article>
+              <article class="values-ledger__item" data-reveal>
+                <strong>Urgency with control</strong>
+                <p>Speed matters, but composure is part of the service. Clients should feel steadied, not rushed.</p>
+              </article>
+              <article class="values-ledger__item" data-reveal>
+                <strong>Discretion</strong>
+                <p>Aircraft movements, ownership realities, and maintenance conversations are treated with respect and restraint.</p>
+              </article>
+              <article class="values-ledger__item" data-reveal>
+                <strong>Owner-level care</strong>
+                <p>Whether the client is a principal or a department, the aircraft is handled like it genuinely matters.</p>
+              </article>
+              <article class="values-ledger__item" data-reveal>
+                <strong>Technical mastery</strong>
+                <p>Brand sophistication only counts if the underlying maintenance culture is disciplined and real.</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -164,13 +175,13 @@
 
       <section class="section section--manifesto-story" id="story">
         <div class="section__inner">
-          <div class="manifesto-grid manifesto-grid--bold" data-reveal>
-            <div class="quote-block">
+          <div class="manifesto-assembly" data-reveal>
+            <div class="manifesto-assembly__quote">
               <div class="section-label">Standards Manifesto</div>
-              <h2 class="quote-block__statement">We behave as though every aircraft entrusted to us belongs to someone who notices everything.</h2>
+              <h2>We behave as though every aircraft entrusted to us belongs to someone who notices everything.</h2>
               <div class="quote-block__cite">MidAmerica Standard</div>
             </div>
-            <div>
+            <div class="manifesto-assembly__body">
               <p>
                 That mindset shapes how we communicate, plan downtime, present completed work, and treat stakeholders at every
                 level of sophistication. MidAmerica exists to prove that maintenance can feel serious, elegant, and deeply
