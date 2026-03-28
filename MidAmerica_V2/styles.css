@@ -4483,6 +4483,14 @@ body::after {
   color: rgba(245, 248, 250, 0.78);
 }
 
+.section--home-command .command-list li {
+  color: rgba(245, 248, 250, 0.78);
+}
+
+.section--home-command .command-list li::before {
+  background: linear-gradient(135deg, rgba(246, 237, 221, 0.96), rgba(209, 170, 120, 0.88));
+}
+
 .command-cell--wide {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
