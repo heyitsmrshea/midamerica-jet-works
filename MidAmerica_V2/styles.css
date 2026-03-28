@@ -4301,10 +4301,12 @@ body::after {
 
 .hero-stage--home .hero-stage__rail {
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   right: -2rem;
-  bottom: 2rem;
-  width: 310px;
+  bottom: 3rem;
+  width: 280px;
+  display: grid;
+  align-content: center;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-left: 0;
   border-radius: 28px;
