@@ -6512,6 +6512,12 @@ body::after {
 
 /* Final pass refinements */
 
+.hero--home h1 {
+  max-width: 11.5ch;
+  font-size: clamp(1.66rem, 2.8vw, 2.58rem);
+  line-height: 0.94;
+}
+
 .section--ops-matrix .editorial-panel {
   background:
     linear-gradient(160deg, rgba(10, 23, 36, 0.97), rgba(24, 54, 80, 0.92)),
