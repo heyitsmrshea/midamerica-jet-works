@@ -6922,3 +6922,556 @@ body[data-page="ownership"] .close-section__copy h2 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Round 2 systemic audit fixes */
+
+.button,
+.button-secondary {
+  border-radius: 10px;
+}
+
+.topbar__actions {
+  gap: 1.1rem;
+}
+
+.topbar__actions .pill,
+.topbar__actions .button,
+.topbar__actions .button-secondary {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text);
+}
+
+.topbar__actions .pill::before,
+.topbar__actions .pill::after,
+.topbar__actions .button::before,
+.topbar__actions .button::after,
+.topbar__actions .button-secondary::before,
+.topbar__actions .button-secondary::after {
+  display: none;
+}
+
+.topbar__actions .pill {
+  padding-right: 1.25rem;
+  border-right: 1px solid rgba(18, 33, 48, 0.12);
+  color: rgba(18, 33, 48, 0.66);
+}
+
+.topbar__actions .button,
+.topbar__actions .button-secondary {
+  position: relative;
+  letter-spacing: 0.17em;
+}
+
+.topbar__actions .button {
+  padding-right: 1.4rem;
+}
+
+.topbar__actions .button::after,
+.topbar__actions .button-secondary::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.topbar__actions .button:hover,
+.topbar__actions .button-secondary:hover,
+.topbar__actions .pill:hover {
+  transform: none;
+  color: rgba(18, 33, 48, 0.78);
+}
+
+.section--service-runway > .section__inner,
+.section--systems-board > .section__inner,
+.section--cadence-board > .section__inner,
+.section--contact-flow > .section__inner,
+.section#practice > .section__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.66fr) minmax(0, 1.34fr);
+  gap: 2.1rem;
+  align-items: start;
+}
+
+.section--service-runway .section-heading,
+.section--systems-board .section-heading,
+.section--cadence-board .section-heading,
+.section--contact-flow .section-heading,
+.section#practice .section-heading {
+  position: sticky;
+  top: calc(var(--nav-h) + 1.8rem);
+  padding-top: 0.25rem;
+}
+
+.section--service-runway .timeline,
+.section--systems-board .signal-row--capabilities,
+.section--contact-flow .process-grid--contact,
+.section#practice .process-grid {
+  border: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.section--service-runway .timeline {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.timeline--service .timeline__item {
+  min-height: 100%;
+  border: 1px solid rgba(18, 33, 48, 0.08);
+  border-top: 3px solid rgba(36, 76, 111, 0.42);
+  border-radius: 14px !important;
+  padding: 1.35rem 1.25rem 1.4rem;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 245, 0.98), rgba(247, 240, 230, 0.92)),
+    linear-gradient(90deg, rgba(17, 36, 54, 0.025) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 20px 44px rgba(12, 27, 43, 0.08);
+}
+
+.timeline--service .timeline__item:nth-child(2) {
+  transform: translateY(1.25rem);
+  border-top-color: rgba(209, 170, 120, 0.88);
+  background:
+    radial-gradient(circle at 88% 14%, rgba(255, 255, 255, 0.46), transparent 26%),
+    linear-gradient(145deg, rgba(237, 220, 193, 0.98), rgba(250, 242, 228, 0.94));
+}
+
+.timeline--service .timeline__item:nth-child(3) {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.96), rgba(24, 54, 80, 0.9)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-top-color: rgba(209, 170, 120, 0.82);
+  box-shadow: 0 26px 56px rgba(12, 27, 43, 0.14);
+}
+
+.timeline--service .timeline__item:nth-child(3) .timeline__index,
+.timeline--service .timeline__item:nth-child(3) h3,
+.timeline--service .timeline__item:nth-child(3) p {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.timeline--service .timeline__item:nth-child(3) p {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.section--systems-board .signal-row--capabilities {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.section--systems-board .signal-card {
+  min-height: 100%;
+  border: 1px solid rgba(18, 33, 48, 0.08);
+  border-top: 3px solid rgba(36, 76, 111, 0.42);
+  border-left: 1px solid rgba(18, 33, 48, 0.08);
+  border-radius: 14px !important;
+  padding: 1.35rem 1.2rem 1.45rem;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 245, 0.98), rgba(247, 240, 230, 0.92)),
+    linear-gradient(90deg, rgba(17, 36, 54, 0.025) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 20px 44px rgba(12, 27, 43, 0.08);
+}
+
+.section--systems-board .signal-card:first-child {
+  grid-row: 1 / span 2;
+  border-top-color: rgba(209, 170, 120, 0.88);
+  background:
+    radial-gradient(circle at 90% 12%, rgba(255, 255, 255, 0.52), transparent 22%),
+    linear-gradient(145deg, rgba(237, 220, 193, 0.98), rgba(250, 242, 228, 0.94));
+}
+
+.section--systems-board .signal-card:nth-child(2) {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.96), rgba(24, 54, 80, 0.9)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  border-top-color: rgba(142, 183, 220, 0.92);
+  box-shadow: 0 24px 52px rgba(12, 27, 43, 0.14);
+}
+
+.section--systems-board .signal-card:nth-child(2) strong,
+.section--systems-board .signal-card:nth-child(2) span {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.section--systems-board .signal-card:nth-child(2) span {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.section--capability-proof > .section__inner,
+.section--values-matrix > .section__inner,
+.section--credits-sources > .section__inner {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.section--capability-proof .section-heading,
+.section--values-matrix .values-ledger__intro {
+  max-width: 34rem;
+}
+
+.section--capability-proof .detail-grid {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  border: 0;
+}
+
+.section--capability-proof .detail-card {
+  min-height: 100%;
+  padding: 1.35rem 1.25rem 1.45rem;
+  border: 1px solid rgba(18, 33, 48, 0.08);
+  border-radius: 14px !important;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 245, 0.98), rgba(247, 240, 230, 0.92)),
+    linear-gradient(90deg, rgba(17, 36, 54, 0.025) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 20px 44px rgba(12, 27, 43, 0.08);
+}
+
+.section--capability-proof .detail-card:first-child {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.52), transparent 22%),
+    linear-gradient(145deg, rgba(237, 220, 193, 0.98), rgba(250, 242, 228, 0.94));
+}
+
+.section--capability-proof .detail-card:nth-child(3) {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.96), rgba(24, 54, 80, 0.9)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 24px 52px rgba(12, 27, 43, 0.14);
+}
+
+.section--capability-proof .detail-card:nth-child(3) strong,
+.section--capability-proof .detail-card:nth-child(3) p {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.section--capability-proof .detail-card:nth-child(3) p {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.section--capability-proof .detail-card::before {
+  position: static;
+  display: block;
+  margin-bottom: 0.7rem;
+  color: rgba(18, 33, 48, 0.34);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+}
+
+.section--capability-proof .detail-card:nth-child(3)::before {
+  color: rgba(245, 248, 250, 0.54);
+}
+
+.section--ownership-split > .section__inner {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.command-strip--ownership {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  border: 0;
+}
+
+.section--ownership-split .command-cell {
+  border: 1px solid rgba(18, 33, 48, 0.08);
+  border-left: 1px solid rgba(18, 33, 48, 0.08);
+  border-radius: 14px !important;
+  padding: 1.35rem 1.2rem 1.4rem;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 245, 0.98), rgba(247, 240, 230, 0.92)),
+    linear-gradient(90deg, rgba(17, 36, 54, 0.025) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 20px 44px rgba(12, 27, 43, 0.08);
+}
+
+.section--ownership-split .command-cell--owner {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.52), transparent 22%),
+    linear-gradient(145deg, rgba(237, 220, 193, 0.98), rgba(250, 242, 228, 0.94));
+}
+
+.section--ownership-split .command-cell--operator {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.96), rgba(24, 54, 80, 0.9)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 24px 52px rgba(12, 27, 43, 0.14);
+}
+
+.section--ownership-split .command-cell--operator .command-cell__eyebrow,
+.section--ownership-split .command-cell--operator h3,
+.section--ownership-split .command-cell--operator p {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.section--ownership-split .command-cell--operator p {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.section--ownership-split .command-cell--shared {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.45rem;
+  align-items: start;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 245, 0.98), rgba(244, 236, 224, 0.93)),
+    linear-gradient(90deg, rgba(17, 36, 54, 0.025) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+}
+
+.section--ownership-split .command-cell--shared .command-cell__eyebrow,
+.section--ownership-split .command-cell--shared h3,
+.section--ownership-split .command-cell--shared p {
+  color: var(--text);
+}
+
+.section--ownership-split .command-cell--shared p {
+  color: rgba(18, 33, 48, 0.74);
+  max-width: 42rem;
+}
+
+.section--ownership-split .command-cell--shared h3 {
+  max-width: 24ch;
+}
+
+.section--cadence-board .process-grid,
+.section--contact-flow .process-grid--contact,
+.section#practice .process-grid {
+  grid-template-columns: 1fr;
+  gap: 0.95rem;
+  border: 0;
+}
+
+.section--cadence-board .process-step,
+.section--contact-flow .process-step,
+.section#practice .process-step {
+  padding: 1.2rem 1.2rem 1.25rem 4rem;
+  border: 1px solid rgba(18, 33, 48, 0.08);
+  border-left: 1px solid rgba(18, 33, 48, 0.08);
+  border-radius: 14px !important;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 245, 0.98), rgba(247, 240, 230, 0.92)),
+    linear-gradient(90deg, rgba(17, 36, 54, 0.025) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 18px 40px rgba(12, 27, 43, 0.08);
+  position: relative;
+}
+
+.section--cadence-board .process-step::before,
+.section--contact-flow .process-step::before,
+.section#practice .process-step::before {
+  content: "";
+  position: absolute;
+  left: 1.45rem;
+  top: 1.35rem;
+  bottom: 1.35rem;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(36, 76, 111, 0.48), rgba(209, 170, 120, 0.8));
+}
+
+.section--cadence-board .process-step__index,
+.section--contact-flow .process-step__index,
+.section#practice .process-step__index {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+}
+
+.section--cadence-board .process-step:nth-child(2),
+.section--contact-flow .process-step:nth-child(1),
+.section#practice .process-step:nth-child(3) {
+  background:
+    radial-gradient(circle at 90% 14%, rgba(255, 255, 255, 0.5), transparent 24%),
+    linear-gradient(145deg, rgba(237, 220, 193, 0.98), rgba(250, 242, 228, 0.94));
+}
+
+.values-ledger {
+  position: relative;
+  grid-template-columns: minmax(0, 0.56fr) minmax(0, 1.44fr);
+  gap: 2rem;
+}
+
+.values-ledger__items {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  border: 0;
+  counter-reset: value-item;
+}
+
+.values-ledger__item {
+  position: relative;
+  display: block;
+  padding: 1.3rem 1.2rem 1.35rem;
+  border: 1px solid rgba(18, 33, 48, 0.08);
+  border-left: 1px solid rgba(18, 33, 48, 0.08);
+  border-radius: 14px !important;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 245, 0.98), rgba(247, 240, 230, 0.92)),
+    linear-gradient(90deg, rgba(17, 36, 54, 0.025) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 18px 40px rgba(12, 27, 43, 0.08);
+  counter-increment: value-item;
+}
+
+.values-ledger__item::before {
+  content: "0" counter(value-item);
+  display: block;
+  margin-bottom: 0.85rem;
+  color: rgba(18, 33, 48, 0.34);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.values-ledger__item:nth-child(2),
+.values-ledger__item:nth-child(5) {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.48), transparent 24%),
+    linear-gradient(145deg, rgba(237, 220, 193, 0.98), rgba(250, 242, 228, 0.94));
+}
+
+.values-ledger__item:nth-child(4) {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.96), rgba(24, 54, 80, 0.9)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 24px 52px rgba(12, 27, 43, 0.14);
+}
+
+.values-ledger__item:nth-child(4)::before,
+.values-ledger__item:nth-child(4) strong,
+.values-ledger__item:nth-child(4) p {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.values-ledger__item:nth-child(4) p {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.section--credits-sources .grid-3 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.section--credits-sources .info-card {
+  min-height: 100%;
+  padding: 1.35rem 1.2rem 1.4rem;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(12, 27, 43, 0.08);
+}
+
+.section--credits-sources .info-card:first-child {
+  grid-row: span 2;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.48), transparent 24%),
+    linear-gradient(145deg, rgba(237, 220, 193, 0.98), rgba(250, 242, 228, 0.94));
+}
+
+.hero--credits .hero__inner {
+  align-items: center;
+}
+
+.hero--credits .hero__copy {
+  max-width: 34rem;
+}
+
+.hero--credits .hero-stage__frame {
+  min-height: 480px;
+}
+
+body[data-page="credits"] .topbar__actions .button {
+  color: rgba(18, 33, 48, 0.78);
+}
+
+@media (max-width: 1120px) {
+  .section--service-runway > .section__inner,
+  .section--systems-board > .section__inner,
+  .section--cadence-board > .section__inner,
+  .section--contact-flow > .section__inner,
+  .section#practice > .section__inner,
+  .values-ledger {
+    grid-template-columns: 1fr;
+  }
+
+  .section--service-runway .section-heading,
+  .section--systems-board .section-heading,
+  .section--cadence-board .section-heading,
+  .section--contact-flow .section-heading,
+  .section#practice .section-heading {
+    position: static;
+  }
+
+  .section--service-runway .timeline,
+  .section--systems-board .signal-row--capabilities,
+  .values-ledger__items,
+  .section--capability-proof .detail-grid,
+  .section--credits-sources .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .section--systems-board .signal-card:first-child,
+  .section--credits-sources .info-card:first-child,
+  .section--ownership-split .command-cell--shared {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .section--service-runway .timeline__item:nth-child(2) {
+    transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar__actions .pill {
+    display: none;
+  }
+
+  .section--service-runway .timeline__item,
+  .section--systems-board .signal-card,
+  .section--capability-proof .detail-card,
+  .values-ledger__item,
+  .section--ownership-split .command-cell,
+  .section--cadence-board .process-step,
+  .section--contact-flow .process-step,
+  .section#practice .process-step,
+  .section--credits-sources .info-card {
+    padding: 1.05rem 1rem 1.15rem;
+  }
+
+  .section--cadence-board .process-step,
+  .section--contact-flow .process-step,
+  .section#practice .process-step {
+    padding-left: 3.2rem;
+  }
+
+  .section--cadence-board .process-step::before,
+  .section--contact-flow .process-step::before,
+  .section#practice .process-step::before {
+    left: 1.1rem;
+  }
+}
