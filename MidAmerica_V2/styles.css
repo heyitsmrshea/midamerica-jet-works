@@ -6509,3 +6509,217 @@ body::after {
 .section--intake-console .field input::placeholder {
   color: rgba(18, 33, 48, 0.42);
 }
+
+/* Final pass refinements */
+
+.section--ops-matrix .editorial-panel {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.97), rgba(24, 54, 80, 0.92)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+}
+
+.section--ops-matrix .editorial-panel .section-label,
+.section--ops-matrix .editorial-panel h2,
+.section--ops-matrix .editorial-panel p,
+.section--ops-matrix .detail-card strong,
+.section--ops-matrix .detail-card p {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.section--ops-matrix .editorial-panel p,
+.section--ops-matrix .detail-card p {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.section--systems-board .signal-card:nth-child(2) {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.96), rgba(24, 54, 80, 0.9)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 18px 38px rgba(12, 27, 43, 0.12);
+}
+
+.section--systems-board .signal-card:nth-child(2) strong,
+.section--systems-board .signal-card:nth-child(2) span {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.section--owners-lens .audience-panel:first-child {
+  background:
+    linear-gradient(145deg, #eedcc0 0%, #d9bb92 100%),
+    linear-gradient(90deg, rgba(17, 36, 54, 0.035) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+}
+
+.section--owners-lens .audience-panel:first-child h3,
+.section--owners-lens .audience-panel:first-child li,
+.section--owners-lens .audience-panel:first-child .hero__lead,
+.section--owners-lens .audience-panel:first-child .section-label {
+  color: #122130;
+}
+
+.section--owners-lens .audience-panel:last-child {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.96), rgba(24, 54, 80, 0.9)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 24px 54px rgba(12, 27, 43, 0.16);
+}
+
+.section--owners-lens .audience-panel:last-child h3,
+.section--owners-lens .audience-panel:last-child li,
+.section--owners-lens .audience-panel:last-child .hero__lead,
+.section--owners-lens .audience-panel:last-child .section-label {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.section--owners-lens .audience-panel:last-child .hero__lead,
+.section--owners-lens .audience-panel:last-child li {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.section--departments-lens .info-card:last-child {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.96), rgba(24, 54, 80, 0.9)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 24px 54px rgba(12, 27, 43, 0.16);
+}
+
+.section--departments-lens .info-card:last-child h3,
+.section--departments-lens .info-card:last-child li {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.section--departments-lens .info-card:last-child li {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.section--cadence-board .process-step:nth-child(2) {
+  background:
+    linear-gradient(160deg, rgba(10, 23, 36, 0.96), rgba(24, 54, 80, 0.9)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  box-shadow: 0 18px 40px rgba(12, 27, 43, 0.12);
+}
+
+.section--cadence-board .process-step:nth-child(2) strong,
+.section--cadence-board .process-step:nth-child(2) p,
+.section--cadence-board .process-step:nth-child(2) .process-step__index {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.section--cadence-board .process-step:nth-child(2) p {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.close-section .support-rail {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.close-section .support-rail__item {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+.close-section .support-rail__item::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.24), rgba(209, 170, 120, 0.82));
+}
+
+.close-section .support-rail__item strong,
+.close-section .support-rail__item span {
+  color: rgba(245, 248, 250, 0.94);
+}
+
+.close-section .support-rail__item span {
+  color: rgba(245, 248, 250, 0.74);
+}
+
+.close-section .close-section__actions {
+  grid-column: 1 / -1;
+  padding-top: 0.25rem;
+}
+
+body[data-page="ownership"] .close-section__panel {
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  align-items: start;
+}
+
+body[data-page="ownership"] .close-section__copy h2 {
+  max-width: 10ch;
+}
+
+@media (max-width: 720px) {
+  .hero--home .hero__notes {
+    border: 1px solid rgba(18, 33, 48, 0.08);
+    background:
+      linear-gradient(180deg, rgba(255, 251, 245, 0.98), rgba(246, 236, 221, 0.9)),
+      linear-gradient(90deg, rgba(17, 36, 54, 0.035) 1px, transparent 1px);
+    background-size: auto, 24px 24px;
+    box-shadow: 0 18px 40px rgba(12, 27, 43, 0.1);
+  }
+
+  .hero--home .hero__note {
+    border-right: 0;
+    border-top: 1px solid rgba(18, 33, 48, 0.08);
+  }
+
+  .hero--home .hero__note:first-child {
+    border-top: 0;
+  }
+
+  .hero--home .hero__note strong,
+  .hero--home .hero__note span {
+    color: var(--text);
+  }
+
+  .hero--home .hero__note span {
+    color: var(--muted);
+  }
+
+  .section--ops-matrix .editorial-split {
+    gap: 0;
+  }
+
+  .section--ops-matrix .editorial-photo {
+    order: 1;
+    min-height: 280px;
+    box-shadow: 0 26px 56px rgba(12, 27, 43, 0.14);
+  }
+
+  .section--ops-matrix .editorial-panel {
+    order: 2;
+    margin: -2rem 0.9rem 0;
+    position: relative;
+    z-index: 2;
+    padding: 1.2rem;
+    box-shadow: 0 24px 54px rgba(12, 27, 43, 0.16);
+  }
+
+  .section--systems-board .signal-card:nth-child(2),
+  .section--cadence-board .process-step:nth-child(2),
+  .section--owners-lens .audience-panel:last-child,
+  .section--departments-lens .info-card:last-child {
+    box-shadow: 0 16px 34px rgba(12, 27, 43, 0.1);
+  }
+
+  .section--ownership-split .command-cell--shared,
+  .section--expectation-map .compare-card--operator {
+    box-shadow: 0 16px 34px rgba(12, 27, 43, 0.1);
+  }
+
+  .close-section .support-rail {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="ownership"] .close-section__panel {
+    grid-template-columns: 1fr;
+  }
+}
